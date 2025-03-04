@@ -1,4 +1,4 @@
-# Bang Replay 💥
+# Bang Replay 💥 🔁
 
 **View this project:** https://bang.zsrobinson.com
 
