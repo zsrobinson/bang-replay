@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bang Replay</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <h1>Bang Replay 💥 🔁</h1>
+
+    <p>
+      Created by <a href="https://zsrobinson.com">Zachary Robinson</a>; View on
+      <a href="https://bang.zsrobinson.com">GitHub</a>.
+    </p>
+
+    <details>
+      <summary><b>About this project</b></summary>
+
+      This is a simple redirection engine <em>(not a search engine!)</em> that
+      keeps track of your searches locally. Inspired by
+      <a href="https://unduck.link/">Und*ck</a> by Theo Browne and extended by
+      IndexedDB to save previous queries. This was mostly a learning exercise
+      and proof of concept for using IndexedDB in a larger project, and only
+      uses vanilla JavaScript APIs without any libraries or build steps. If I’m
+      going to recommend someone learn vanilla HTML/CSS/JS before using
+      something like React, then I figured I should know what the regular
+      IndexedDB API looks like before using a wrapper for it (and hey, I might
+      as well use vanilla HTML/CSS/JS too while I’m at it). Adding a Service
+      Worker to cache the page resources locally would make this much more
+      usuable as a real search engine, but it’s <em>really</em> hard — there’s a
+      reason Theo just
+      <a href="https://github.com/vite-pwa/vite-plugin-pwa">used a library</a>
+      for it. While only a limited number of hardcoded bangs are supported here,
+      it would be pretty trivial to instead perform a lookup on all of the ones
+      that DuckDuckGo uses themselves.
+    </details>
+
+    <p>
+      To search, use the box below or configure your browser to use
+      <code>https://bang.zsrobinson.com?q=%s</code> as it’s custom search
+      engine. Since everything is kept local, your searches are not sent to any
+      servers besides those of the search engine you’re forwarded to.
+    </p>
+
+    <form>
+      <input name="q" />
+      <button>Search</button>
+    </form>
+
+    <button id="clear">Clear Database</button>
+  </body>
+</html>
